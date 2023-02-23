@@ -25,29 +25,12 @@ body::before {
 }
 
 @media (max-width: 768px) {
-  body::after {
-    content: '';
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    background-color: #82fffe;
-    filter: blur(9.5rem);
-    z-index: -1;
-    position: absolute;
-    top: 3rem;
-    left: 2rem;
+  body::after,
+  body::before {
+    display: none;
   }
 
-  body::before {
-    content: '';
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    background-color: #6ab4e2;
-    filter: blur(9.5rem);
-    z-index: -1;
-    position: absolute;
-    bottom: 3rem;
-    right: 2rem;
+  body {
+    background: linear-gradient(to bottom, black, #82fffe, #6ab4e2, black);
   }
 }
